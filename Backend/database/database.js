@@ -6,11 +6,11 @@ mongoose.connect('mongodb://localhost:27017/freelanceApp', {
     useUnifiedTopology: true,
 });
 
-const db = mongoose.connection;
+const db = mongoose.connection
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
-    console.log('Connected to the database');
+    console.log('Connected to the database')
 });
 
 const jobPostingSchema = new Schema({
