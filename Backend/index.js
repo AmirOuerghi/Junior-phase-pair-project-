@@ -18,7 +18,7 @@ app.post('/jobpostings', async (req, res) => {
     }
 });
 
-// Get Job Posting
+// Get Job Posting by Title
 app.get('/jobpostings/:jobTitle', async (req, res) => {
     const jobTitle = req.params.jobTitle;
     const job = await db.getJobPostingByTitle(jobTitle);
@@ -27,6 +27,17 @@ app.get('/jobpostings/:jobTitle', async (req, res) => {
         res.json(job);
     } else {
         res.status(404).json({ error: 'Job posting not found' });
+    }
+});
+
+// Get All Job Postings
+app.get('/jobpostings', async (req, res) => {
+    const allJobPostings = await db.getAllJobPostings();
+
+    if (allJobPostings) {
+        res.json(allJobPostings);
+    } else {
+        res.status(500).json({ error: 'Failed to retrieve job postings' });
     }
 });
 
@@ -54,7 +65,9 @@ app.delete('/jobpostings/:jobTitle', async (req, res) => {
         res.status(500).json({ error: 'Failed to delete job posting' });
     }
 });
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
