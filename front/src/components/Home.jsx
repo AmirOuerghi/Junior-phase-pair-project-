@@ -1,11 +1,15 @@
 import React from 'react'
 import NavBar from './NavBar'
+import Slider from './Slider.jsx'
+import About from './About.jsx'
+import Footer from './Footer.jsx'
 function Home() {
   return (
     <div>
     <NavBar />
-
-    <h1>helllloooooooooooooooo</h1>
+<Slider/>
+<About/>
+  <Footer/>
     </div>
   )
 }
