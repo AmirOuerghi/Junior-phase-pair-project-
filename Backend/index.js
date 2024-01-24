@@ -8,6 +8,8 @@ const cors =require('cors')
 
 app.use(bodyParser.json());
 app.use(cors())
+
+
 app.post('/jobpostings', async (req, res) => {
     const { title, description, budget, skillsRequired, deadline, posterName, posterPic } = req.body;
     const newJob = await db.createJobPosting(title, description, budget, skillsRequired, deadline, posterName, posterPic);

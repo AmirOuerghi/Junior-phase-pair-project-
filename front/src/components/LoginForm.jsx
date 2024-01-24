@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import '../LoginForm.css';
 import SocialButtons from './SocialButtons';
-import Home from './Home'; // Import your Home component
-
+import Home from './Home'; 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
