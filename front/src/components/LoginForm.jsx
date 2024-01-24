@@ -9,28 +9,22 @@ const LoginForm = () => {
   const [isLoggedIn, setLoggedIn] = useState(false);
 
   const handleLogin = () => {
-    // In a real application, you would perform actual authentication here.
-    // For this example, let's check if the username and password match a predefined value.
     const validUsername = 'user@example.com';
     const validPassword = 'password123';
 
     if (username === validUsername && password === validPassword) {
-      // Authentication successful
       alert('Login successful!');
-      // Store user information in local storage
       localStorage.setItem('loggedInUser', JSON.stringify({ username }));
-      // Update the login state
       setLoggedIn(true);
     } else {
-      // Authentication failed
       alert('Invalid username or password');
     }
   };
 
-  // If logged in, render the Home component
   if (isLoggedIn) {
-    return <Home/>;
+    return <Home />;
   }
+
   return (
     <form className="glass-form">
       <h3>Login Here</h3>

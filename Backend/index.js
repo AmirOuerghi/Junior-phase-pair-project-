@@ -2,11 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./database/database.js'); 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 5000;
+const cors =require('cors')
+
 
 app.use(bodyParser.json());
-
-// Create Job Posting
+app.use(cors())
 app.post('/jobpostings', async (req, res) => {
     const { title, description, budget, skillsRequired, deadline, posterName, posterPic } = req.body;
     const newJob = await db.createJobPosting(title, description, budget, skillsRequired, deadline, posterName, posterPic);
@@ -18,7 +19,6 @@ app.post('/jobpostings', async (req, res) => {
     }
 });
 
-// Get Job Posting by Title
 app.get('/jobpostings/:jobTitle', async (req, res) => {
     const jobTitle = req.params.jobTitle;
     const job = await db.getJobPostingByTitle(jobTitle);
@@ -30,7 +30,6 @@ app.get('/jobpostings/:jobTitle', async (req, res) => {
     }
 });
 
-// Get All Job Postings
 app.get('/jobpostings', async (req, res) => {
     const allJobPostings = await db.getAllJobPostings();
 
@@ -41,7 +40,6 @@ app.get('/jobpostings', async (req, res) => {
     }
 });
 
-// Update Job Posting using title
 app.put('/jobpostings/:jobTitle', async (req, res) => {
     const jobTitle = req.params.jobTitle;
     const updatedFields = req.body;
@@ -54,7 +52,6 @@ app.put('/jobpostings/:jobTitle', async (req, res) => {
     }
 });
 
-// Delete Job Posting using title
 app.delete('/jobpostings/:jobTitle', async (req, res) => {
     const jobTitle = req.params.jobTitle;
     const deletedJob = await db.deleteJobPostingByTitle(jobTitle);
@@ -66,7 +63,6 @@ app.delete('/jobpostings/:jobTitle', async (req, res) => {
     }
 });
 
-// Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
