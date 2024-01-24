@@ -62,6 +62,17 @@ async function getJobPostingByTitle(title) {
     }
 }
 
+// Read all (R)
+async function getAllJobPostings() {
+    try {
+        const jobPostings = await JobPosting.find();
+        return jobPostings;
+    } catch (err) {
+        console.error(err);
+        return null;
+    }
+}
+
 // Update (U) using title
 async function updateJobPostingByTitle(title, updatedFields) {
     try {
@@ -89,6 +100,7 @@ async function deleteJobPostingByTitle(title) {
 module.exports = {
     createJobPosting,
     getJobPostingByTitle, 
+    getAllJobPostings,
     updateJobPostingByTitle, 
     deleteJobPostingByTitle, 
 };

@@ -1,0 +1,112 @@
+[
+    {
+        "title": "Web Development Project",
+        "description": "Create a dynamic website with user authentication and interactive features.",
+        "budget": "$5,000 - $7,000",
+        "skillsRequired": ["HTML, CSS, JavaScript", "Node.js", "React.js"],
+        "deadline": "2024-02-15",
+        "poster": {
+            "name": "John Doe",
+            "pic": "https://example.com/johndoe-pic.jpg"
+        }
+    },
+    {
+        "title": "Mobile App Development",
+        "description": "Build a cross-platform mobile app for iOS and Android.",
+        "budget": "$8,000 - $10,000",
+        "skillsRequired": ["React Native", "JavaScript", "Firebase"],
+        "deadline": "2024-03-01",
+        "poster": {
+            "name": "Jane Smith",
+            "pic": "https://example.com/janesmith-pic.jpg"
+        }
+    },
+    {
+        "title": "Graphic Design Project",
+        "description": "Design a set of unique and creative graphics for marketing materials.",
+        "budget": "$3,000 - $4,500",
+        "skillsRequired": ["Adobe Photoshop", "Illustrator", "Creativity"],
+        "deadline": "2024-02-20",
+        "poster": {
+            "name": "Alex Johnson",
+            "pic": "https://example.com/alexjohnson-pic.jpg"
+        }
+    },
+    {
+        "title": "Data Analysis Task",
+        "description": "Analyze a dataset and provide insights using statistical methods.",
+        "budget": "$6,000 - $8,000",
+        "skillsRequired": ["Python", "Pandas", "Statistical Analysis"],
+        "deadline": "2024-02-28",
+        "poster": {
+            "name": "Emily Brown",
+            "pic": "https://example.com/emilybrown-pic.jpg"
+        }
+    },
+    {
+        "title": "Content Writing Assignment",
+        "description": "Create engaging and SEO-friendly content for a blog.",
+        "budget": "$2,500 - $3,500",
+        "skillsRequired": ["Writing", "SEO", "Creativity"],
+        "deadline": "2024-02-18",
+        "poster": {
+            "name": "Michael Wilson",
+            "pic": "https://example.com/michaelwilson-pic.jpg"
+        }
+    },
+    {
+        "title": "Video Editing Project",
+        "description": "Edit and enhance a series of promotional videos for a product launch.",
+        "budget": "$4,500 - $6,000",
+        "skillsRequired": ["Video Editing", "Adobe Premiere", "Creativity"],
+        "deadline": "2024-03-05",
+        "poster": {
+            "name": "Sophia Miller",
+            "pic": "https://example.com/sophiamiller-pic.jpg"
+        }
+    },
+    {
+        "title": "Social Media Marketing Campaign",
+        "description": "Develop and execute a social media marketing strategy for a new product.",
+        "budget": "$7,000 - $9,000",
+        "skillsRequired": ["Social Media Marketing", "Content Creation", "Analytics"],
+        "deadline": "2024-03-10",
+        "poster": {
+            "name": "William Turner",
+            "pic": "https://example.com/williamturner-pic.jpg"
+        }
+    },
+    {
+        "title": "UI/UX Design Challenge",
+        "description": "Design a modern and user-friendly interface for a web application.",
+        "budget": "$5,500 - $7,500",
+        "skillsRequired": ["UI/UX Design", "Adobe XD", "User Research"],
+        "deadline": "2024-02-25",
+        "poster": {
+            "name": "Olivia Clark",
+            "pic": "https://example.com/oliviaclark-pic.jpg"
+        }
+    },
+    {
+        "title": "E-commerce Website Development",
+        "description": "Build a fully functional e-commerce website with payment integration.",
+        "budget": "$10,000 - $12,000",
+        "skillsRequired": ["HTML, CSS, JavaScript", "Node.js", "Express", "MongoDB"],
+        "deadline": "2024-03-15",
+        "poster": {
+            "name": "Daniel Taylor",
+            "pic": "https://example.com/danieltaylor-pic.jpg"
+        }
+    },
+    {
+        "title": "Virtual Assistant Programming",
+        "description": "Develop a virtual assistant using natural language processing and AI.",
+        "budget": "$9,000 - $11,000",
+        "skillsRequired": ["Python", "NLP", "Machine Learning"],
+        "deadline": "2024-03-08",
+        "poster": {
+            "name": "Emma Davis",
+            "pic": "https://example.com/emmadavis-pic.jpg"
+        }
+    }
+]
