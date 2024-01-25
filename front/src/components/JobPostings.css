@@ -1,0 +1,113 @@
+/* JobPostings.css */
+
+.job-postings-container {
+  border-radius: 40px;
+  background: linear-gradient(145deg, #856666, #705656);
+  box-shadow: 17px 17px 34px #634c4c, -17px -17px 34px #957272;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Display children in a column */
+  align-items: center; /* Center items horizontally */
+}
+
+.job-postings-heading {
+  color: white;
+  margin-bottom: 20px; /* Add space below heading */
+}
+
+.no-postings-message {
+  color: #856666;
+}
+
+.job-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Wrap items to the next line if they overflow */
+  justify-content: space-around; /* Distribute items evenly along the row */
+}
+
+.job-item {
+  margin: 10px; /* Add space between items */
+  padding: 20px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  flex: 0 0 calc(30% - 20px); /* Set the width of each item (adjust as needed) */
+}
+
+/* Add styles for individual job details */
+.job-title {
+  color: #705656;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.job-description {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.job-budget {
+  color: #856666;
+  margin-bottom: 10px;
+}
+
+.job-skills {
+  color: #705656;
+  margin-bottom: 10px;
+}
+
+.job-deadline {
+  color: #705656;
+  margin-bottom: 10px;
+}
+
+.job-poster {
+  color: #705656;
+  margin-bottom: 10px;
+}
+
+.poster-pic {
+  border-radius: 50%;
+  max-width: 100px;
+}
+
+/* Styles for the update/edit form */
+.edit-form {
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
+  width: 70%;
+}
+
+.edit-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #705656;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-form button {
+  background-color: #856666;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-form button.cancel {
+  background-color: #705656;
+  margin-right: 10px;
+}
