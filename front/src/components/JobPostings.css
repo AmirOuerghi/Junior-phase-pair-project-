@@ -99,15 +99,21 @@
 }
 
 .edit-form button {
-  background-color: #856666;
-  color: white;
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.edit-form button.cancel {
-  background-color: #705656;
+.edit-form button.update-button {
+  background-color: #ff5733; /* Change the background color for the update button */
+  color: white;
   margin-right: 10px;
 }
+
+.edit-form button.delete-button {
+  background-color: #e84545; /* Change the background color for the delete button */
+  color: white;
+}
+
+/* Additional styles for other components */

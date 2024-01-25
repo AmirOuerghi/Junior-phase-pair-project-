@@ -3,7 +3,8 @@ import NavBar from './navbar.jsx';
 import Slider from './Slider.jsx';
 import About from './About.jsx';
 import Footer from './Footer.jsx';
-import JobPostings from './JobPostings.jsx'
+import JobPostings from './JobPostings.jsx';
+import AddJob from './AddJob.jsx';
 
 function Home() {
   const [view, setView] = useState('Home');
@@ -23,9 +24,14 @@ function Home() {
         </>
       )}
       {view === 'About' && <About />}
-       {view === 'Jobs' && <JobPostings />}
+      {view === 'Jobs' && <JobPostings />}
+      {view === 'AddJob' && (
+        <>
+          <NavBar onChangeView={changeView} />
+          {<AddJob onChangeView={changeView} />} {/* Pass the onChangeView function */}
+        </>
+      )}
     </div>
   );
 }
-
-export default Home;
+export default Home
