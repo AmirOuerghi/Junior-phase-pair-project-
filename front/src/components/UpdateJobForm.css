@@ -1,0 +1,101 @@
+.update-job-form-container {
+    max-width: 720px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+  }
+  
+  .update-job-form-heading {
+    font-size: 1.75rem;
+    color: #424242;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  
+  .update-job-form-label {
+    color: #424242;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .update-job-form-input,
+  .update-job-form-textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+  
+  .update-job-form-input:focus,
+  .update-job-form-textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  }
+  
+  .update-job-form-textarea {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  .update-job-form-button {
+    padding: 10px 30px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    outline: none;
+  }
+  
+  .update-job-form-button.save-button {
+    background-color: #10b981;
+    color: #fff;
+    margin-right: 1rem;
+  }
+  
+  .update-job-form-button.cancel-button {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  .update-job-form-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .update-job-form-button.save-button:hover {
+    background-color: #0f9d76;
+  }
+  
+  .update-job-form-button.cancel-button:hover {
+    background-color: #e53935;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .update-job-form-container {
+      margin: 1rem;
+      padding: 1rem;
+    }
+  
+    .update-job-form-heading {
+      font-size: 1.5rem;
+    }
+  
+    .update-job-form-button {
+      padding: 8px 20px;
+      font-size: 0.8rem;
+    }
+  }
