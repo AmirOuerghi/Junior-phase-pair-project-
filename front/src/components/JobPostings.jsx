@@ -1,11 +1,12 @@
-// JobPostings.js
 import React, { useState, useEffect } from 'react';
 import './JobPostings.css';
-import UpdateJobForm from './UpdateJobForm'; // Import the new component
+import UpdateJobForm from './UpdateJobForm';
+import ContactModal from './ContactModal'; // Import the new component
 
 const JobPostings = () => {
   const [jobPostings, setJobPostings] = useState([]);
   const [selectedJob, setSelectedJob] = useState(null);
+  const [isContactModalOpen, setContactModalOpen] = useState(false);
 
   useEffect(() => {
     fetch('http://localhost:5000/jobpostings')
@@ -15,7 +16,6 @@ const JobPostings = () => {
   }, []);
 
   const handleUpdate = (jobTitle) => {
-    // Find the selected job based on the titlej
     const jobToUpdate = jobPostings.find(job => job.title === jobTitle);
     setSelectedJob(jobToUpdate);
   };
@@ -71,6 +71,21 @@ const JobPostings = () => {
     }));
   };
 
+  const handleContactUs = () => {
+    setContactModalOpen(true);
+  };
+
+  const handleCloseContactModal = () => {
+    setContactModalOpen(false);
+  };
+
+  const handleContactSubmit = (contactInfo) => {
+    // Implement logic to send contact information along with the job posting details
+    console.log('Contact information submitted:', contactInfo);
+    // You can send this information to your server or perform any other desired actions
+    // For now, it just logs the data to the console
+  };
+
   return (
     <div className="job-postings-container">
       <h1 className="job-postings-heading">Job Postings</h1>
@@ -96,14 +111,22 @@ const JobPostings = () => {
                   <p className="job-deadline">Deadline: {new Date(job.deadline).toLocaleDateString()}</p>
                   <p className="job-poster">Posted by: {job.poster.name}</p>
                   <div className="job-buttons">
-                  <button className="update-button" onClick={() => handleUpdate(job.title)}>Update</button>
-                  <button className="delete-button" onClick={() => handleDelete(job.title)}>Delete</button>
+                    <button className="update-button" onClick={() => handleUpdate(job.title)}>Update</button>
+                    <button className="delete-button" onClick={() => handleDelete(job.title)}>Delete</button>
                   </div>
                 </li>
               ))}
             </ul>
           )}
         </div>
+      )}
+      
+      <button className="contact-us-button" onClick={handleContactUs}>
+        Contact Us
+      </button>
+
+      {isContactModalOpen && (
+        <ContactModal onClose={handleCloseContactModal} onSubmit={handleContactSubmit} />
       )}
     </div>
   );
