@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './NewJobForm.css'; // Create a CSS file for styling and import it here
+import './AddJob.css'
 
-const AddJob = () => {
+const AddJob = ({ onChangeView }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [budget, setBudget] = useState('');
@@ -33,7 +33,7 @@ const AddJob = () => {
 
     if (response.ok) {
       console.log('Job posting created successfully');
-      // You may want to redirect the user or perform other actions upon successful submission
+      onChangeView('Jobs'); // Update the view to 'Jobs' after creating a new job
     } else {
       console.error('Failed to create job posting');
       // Handle errors or display a message to the user

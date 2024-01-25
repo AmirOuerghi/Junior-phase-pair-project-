@@ -2,13 +2,20 @@
 import React, { useState } from 'react';
 import '../NavBar.css'; // Assuming you have a CSS file for styling
 import About from './About';
+import AddJob from './AddJob'; // Import the AddJob component
 
 const Navbar = ({ onChangeView }) => {
   const [showAbout, setShowAbout] = useState(false);
+  const [showAddJob, setShowAddJob] = useState(false);
 
   const handleAboutClick = () => {
     setShowAbout(!showAbout);
     onChangeView('About'); // Update the view when About is clicked
+  };
+
+  const handleAddJobClick = () => {
+    setShowAddJob(!showAddJob);
+    onChangeView('AddJob'); // Update the view when AddJob is clicked
   };
 
   // Add similar functions for other navigation links
@@ -29,6 +36,11 @@ const Navbar = ({ onChangeView }) => {
               Jobs
             </a>
           </li>
+          <li>
+            <a href="#" onClick={handleAddJobClick}>
+              Add Job
+            </a>
+          </li>
           {/* Add similar lines for other navigation links */}
           <li>
             <a href="#" onClick={handleAboutClick}>
@@ -44,6 +56,7 @@ const Navbar = ({ onChangeView }) => {
       </label>
 
       {showAbout && <About onClick={handleAboutClick} />}
+      {showAddJob && <AddJob />}
     </header>
   );
 };

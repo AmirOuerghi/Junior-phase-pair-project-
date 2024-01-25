@@ -15,6 +15,7 @@ const JobPostings = () => {
   }, []);
 
   const handleUpdate = (jobTitle) => {
+    // Find the selected job based on the titlej
     const jobToUpdate = jobPostings.find(job => job.title === jobTitle);
     setSelectedJob(jobToUpdate);
   };
@@ -95,8 +96,8 @@ const JobPostings = () => {
                   <p className="job-deadline">Deadline: {new Date(job.deadline).toLocaleDateString()}</p>
                   <p className="job-poster">Posted by: {job.poster.name}</p>
                   <div className="job-buttons">
-                    <button onClick={() => handleUpdate(job.title)}>Update</button>
-                    <button onClick={() => handleDelete(job.title)}>Delete</button>
+                  <button className="update-button" onClick={() => handleUpdate(job.title)}>Update</button>
+                  <button className="delete-button" onClick={() => handleDelete(job.title)}>Delete</button>
                   </div>
                 </li>
               ))}

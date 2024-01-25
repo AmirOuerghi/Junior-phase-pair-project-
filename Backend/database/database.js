@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://localhost:27017/freelanceApp', {
+mongoose.connect('mongodb://127.0.0.1:27017/freelanceApp', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
