@@ -1,45 +1,54 @@
 /* JobPostings.css */
 
 .job-postings-container {
-  border-radius: 40px;
+  border-radius: 20px;
   background: linear-gradient(145deg, #856666, #705656);
-  box-shadow: 17px 17px 34px #634c4c, -17px -17px 34px #957272;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   padding: 20px;
   display: flex;
-  flex-direction: column; /* Display children in a column */
-  align-items: center; /* Center items horizontally */
+  flex-direction: column;
+  align-items: center;
 }
 
 .job-postings-heading {
   color: white;
-  margin-bottom: 20px; /* Add space below heading */
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
 }
 
 .no-postings-message {
   color: #856666;
+  font-size: 18px;
+  text-align: center;
 }
 
 .job-list {
   list-style-type: none;
   padding: 0;
   display: flex;
-  flex-wrap: wrap; /* Wrap items to the next line if they overflow */
-  justify-content: space-around; /* Distribute items evenly along the row */
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .job-item {
-  margin: 10px; /* Add space between items */
+  margin: 10px;
   padding: 20px;
   border-radius: 15px;
   background: #fff;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-  flex: 0 0 calc(30% - 20px); /* Set the width of each item (adjust as needed) */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  flex: 0 0 calc(30% - 20px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.job-item:hover {
+  transform: translateY(-5px);
 }
 
 /* Add styles for individual job details */
 .job-title {
   color: #705656;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 8px;
 }
 
