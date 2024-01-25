@@ -1,13 +1,20 @@
-// JobPostings.js
 import React, { useState, useEffect } from 'react';
 import './JobPostings.css';
 import UpdateJobForm from './UpdateJobForm';
+
+import ContactModal from './ContactModal'; // Import the new component
+
 import SearchBar from './SearchBar'; // Import the new SearchBar component
+
 
 const JobPostings = () => {
   const [jobPostings, setJobPostings] = useState([]);
   const [selectedJob, setSelectedJob] = useState(null);
+
+  const [isContactModalOpen, setContactModalOpen] = useState(false);
+
   const [searchTerm, setSearchTerm] = useState('');
+
 
   useEffect(() => {
     fetch('http://localhost:5000/jobpostings')
@@ -72,6 +79,22 @@ const JobPostings = () => {
     }));
   };
 
+
+  const handleContactUs = () => {
+    setContactModalOpen(true);
+  };
+
+  const handleCloseContactModal = () => {
+    setContactModalOpen(false);
+  };
+
+  const handleContactSubmit = (contactInfo) => {
+    // Implement logic to send contact information along with the job posting details
+    console.log('Contact information submitted:', contactInfo);
+    // You can send this information to your server or perform any other desired actions
+    // For now, it just logs the data to the console
+  };
+
   const handleSearch = (term) => {
     setSearchTerm(term);
   };
@@ -80,6 +103,7 @@ const JobPostings = () => {
   const filteredJobPostings = jobPostings.filter(job =>
     job.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
 
   return (
     <div className="job-postings-container">
@@ -118,6 +142,14 @@ const JobPostings = () => {
             </ul>
           )}
         </div>
+      )}
+      
+      <button className="contact-us-button" onClick={handleContactUs}>
+        Contact Us
+      </button>
+
+      {isContactModalOpen && (
+        <ContactModal onClose={handleCloseContactModal} onSubmit={handleContactSubmit} />
       )}
     </div>
   );
