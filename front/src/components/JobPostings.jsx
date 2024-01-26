@@ -1,20 +1,16 @@
+// JobPostings.jsx
 import React, { useState, useEffect } from 'react';
-import './JobPostings.css';
+import Navbar from './Navbar';
 import UpdateJobForm from './UpdateJobForm';
+import ContactModal from './ContactModal';
+import SearchBar from './SearchBar';
+import './JobPostings.css';
 
-import ContactModal from './ContactModal'; // Import the new component
-
-import SearchBar from './SearchBar'; // Import the new SearchBar component
-
-
-const JobPostings = () => {
+const JobPostings = ({ onChangeView }) => {
   const [jobPostings, setJobPostings] = useState([]);
   const [selectedJob, setSelectedJob] = useState(null);
-
   const [isContactModalOpen, setContactModalOpen] = useState(false);
-
   const [searchTerm, setSearchTerm] = useState('');
-
 
   useEffect(() => {
     fetch('http://localhost:5000/jobpostings')
@@ -79,7 +75,6 @@ const JobPostings = () => {
     }));
   };
 
-
   const handleContactUs = () => {
     setContactModalOpen(true);
   };
@@ -95,22 +90,17 @@ const JobPostings = () => {
     // For now, it just logs the data to the console
   };
 
-  const handleSearch = (term) => {
-    setSearchTerm(term);
-  };
-
   // Filter job postings based on the search term
   const filteredJobPostings = jobPostings.filter(job =>
     job.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-
   return (
     <div className="job-postings-container">
+      <Navbar onChangeView={onChangeView} />
       <h1 className="job-postings-heading">Job Postings</h1>
 
-      {/* Add the SearchBar component */}
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar onSearch={term => setSearchTerm(term)} />
 
       {filteredJobPostings.length === 0 ? (
         <p className="no-postings-message">No job postings available.</p>

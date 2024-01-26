@@ -1,41 +1,72 @@
 .contact-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-modal h2 {
+  margin-bottom: 20px;
+}
+
+.contact-modal label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.contact-modal input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.contact-modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-modal-buttons button {
+  border: none;
+  color: #fff;
+  background: linear-gradient(30deg, #0400ff, #4ce3f7);
+  border-radius: 20px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 17px;
+  padding: 0.6em 1.5em;
+  cursor: pointer;
+  transition: background-position 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-modal-buttons button:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 #05bada66;
   }
-  
-  .contact-modal {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 400px;
-    width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  70% {
+    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
   }
-  
-  .contact-modal h2 {
-    margin-bottom: 20px;
+  100% {
+    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
   }
-  
-  .contact-modal label {
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  .contact-modal input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
-  }
-  
-  .contact-modal-buttons {
-    display: flex;
-    justify-content: space-between;
-  } 
+}
