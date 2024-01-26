@@ -1,0 +1,66 @@
+.interview-tips-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .interview-tips-heading {
+    text-align: center;
+    color: #d8d1eb;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .interview-tips-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .interview-tip-item {
+    background: #cbcddd;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .interview-tip-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .tip-title {
+    color: #1e5f99;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  
+  .tip-description {
+    color: #000000;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Media Query */
+  @media (max-width: 768px) {
+    .interview-tips-container {
+      padding: 10px;
+    }
+  
+    .interview-tips-heading {
+      font-size: 1.5em;
+    }
+  }
+  
+  /* For Devices Smaller Than 480px */
+  @media (max-width: 480px) {
+    .interview-tip-item {
+      padding: 15px;
+    }
+  
+    .tip-title {
+      font-size: 1.2em;
+    }
+  }

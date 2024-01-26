@@ -2,7 +2,7 @@
 
 .job-postings-container {
   border-radius: 20px;
-  background: linear-gradient(145deg, #856666, #705656);
+  background: linear-gradient(90deg, #060128, rgb(1, 41, 47));
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   padding: 20px;
   display: flex;
@@ -13,17 +13,23 @@
 .job-postings-heading {
   color: white;
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 30px;
   text-align: center;
+  font-family: URW Chancery L, cursive;
+  margin-top: 4%;
 }
 
+
 .no-postings-message {
-  color: #856666;
+  color: #0f0340;
   font-size: 18px;
   text-align: center;
 }
 
 .job-list {
+  width: 90%;
+margin-left: auto;
+margin-right: auto;
   list-style-type: none;
   padding: 0;
   display: flex;
@@ -35,10 +41,12 @@
   margin: 10px;
   padding: 20px;
   border-radius: 15px;
-  background: #fff;
+  border : 1px solid white;
+  background:transparent ;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   flex: 0 0 calc(30% - 20px);
   transition: transform 0.3s ease-in-out;
+  margin-top: 4%;
 }
 
 .job-item:hover {
@@ -47,33 +55,34 @@
 
 /* Add styles for individual job details */
 .job-title {
-  color: #705656;
+  color: #ffffff;
   font-size: 20px;
   margin-bottom: 8px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .job-description {
-  color: #333;
+  color: #dab530;
   margin-bottom: 10px;
 }
 
 .job-budget {
-  color: #856666;
+  color: #ccc8c8;
   margin-bottom: 10px;
 }
 
 .job-skills {
-  color: #705656;
+  color: #ccc5c5;
   margin-bottom: 10px;
 }
 
 .job-deadline {
-  color: #705656;
+  color: #d4cfcf;
   margin-bottom: 10px;
 }
 
 .job-poster {
-  color: #705656;
+  color: #d2aa3a;
   margin-bottom: 10px;
 }
 
@@ -83,46 +92,140 @@
 }
 
 /* Styles for the update/edit form */
-.edit-form {
-  background-color: #fff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-  padding: 20px;
-  margin: 20px;
-  width: 70%;
-}
+    /* .edit-form {
+      background-color: #9e0b0b;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px;
+      width: 70%;
+    }
 
-.edit-form label {
-  display: block;
-  margin-bottom: 10px;
-  color: #705656;
-}
+    .edit-form label {
+      display: block;
+      margin-bottom: 10px;
+      color: #faf0f0;
+    }
 
-.edit-form input,
-.edit-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+    .edit-form input,
+    .edit-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
-.edit-form button {
-  padding: 10px 15px;
+    .edit-form button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    } */
+
+.job-buttons .update-button {
+  
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(30deg, #0804dc, #4ce3f7);
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 0.6em 1.5em;
+    width:40%;
+    margin-left: 30%;
+
+}
+   
+   .update-button:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+   }
+   
+   @keyframes pulse512 {
+    0% {
+     box-shadow: 0 0 0 0 #05bada66;
+    }
+   
+    70% {
+     box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+   
+    100% {
+     box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+   }
+
+
+.job-buttons  .delete-button {
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    color: #fff;
+    background-image: linear-gradient(30deg, #0202c3, #011416);
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 0.6em 1.5em;
+    width:40%;
+    margin-left: 30%;
 
-.edit-form button.update-button {
-  background-color: #ff5733; /* Change the background color for the update button */
-  color: white;
-  margin-right: 10px;
 }
+   
+   .delete-button:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+   }
+   
+   @keyframes pulse512 {
+    0% {
+     box-shadow: 0 0 0 0 #05bada66;
+    }
+   
+    70% {
+     box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+   
+    100% {
+     box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+   }
 
-.edit-form button.delete-button {
-  background-color: #e84545; /* Change the background color for the delete button */
-  color: white;
-}
 
-/* Additional styles for other components */
+   .contact-us-button {
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    padding: 0.6em 1.5em;
+    cursor: pointer;
+    transition: background-position 0.3s ease, box-shadow 0.3s ease;
+    width: 50%;
+  }
+  
+  button:hover,
+  .contact-us-button:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    animation: pulse512 1.5s infinite;
+  }
+  
+  @keyframes pulse512 {
+    0% {
+      box-shadow: 0 0 0 0 #05bada66;
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+  }
+

@@ -7,7 +7,7 @@ const About = () => {
     <div className="about-container">
       <h2>About Us</h2>
       <p>
-        Welcome to EVLEARN! We are a platform dedicated to providing valuable
+        Welcome to Forsa! We are a platform dedicated to providing valuable
         information and services in the field of [your domain]. Our mission is
         to [brief description of your mission].
       </p>

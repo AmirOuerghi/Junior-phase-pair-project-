@@ -2,7 +2,7 @@
     max-width: 720px;
     margin: 3rem auto;
     padding: 2rem;
-    background: #ffffff;
+    background: #dfe0f5;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     font-family: 'Poppins', sans-serif;
@@ -18,9 +18,9 @@
   }
   
   .update-job-form-label {
-    color: #424242;
+    color: #221e1e;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 1000;
     margin: 1rem 0 0.5rem;
   }
   
@@ -60,13 +60,13 @@
   }
   
   .update-job-form-button.save-button {
-    background-color: #10b981;
+    background-color: #574dbf;
     color: #fff;
     margin-right: 1rem;
   }
   
   .update-job-form-button.cancel-button {
-    background-color: #f44336;
+    background-color: #d45a52;
     color: #fff;
   }
   
@@ -76,17 +76,17 @@
   }
   
   .update-job-form-button.save-button:hover {
-    background-color: #0f9d76;
+    background-color: #171919;
   }
   
   .update-job-form-button.cancel-button:hover {
-    background-color: #e53935;
+    background-color: #905554;
   }
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .update-job-form-container {
-      margin: 1rem;
+      margin: 3rem;
       padding: 1rem;
     }
   
